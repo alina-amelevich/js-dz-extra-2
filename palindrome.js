@@ -24,7 +24,7 @@ function isPalindrome(text) {
     text = replaseSymbol(text, '/');
     text = replaseSymbol(text, '{');
     text = replaseSymbol(text, '}');
-    
+
     let reverseText = '';
 
     for (let i = text.length - 1; i >= 0; i--) {
@@ -33,12 +33,9 @@ function isPalindrome(text) {
 
     if (text === reverseText) {
         return 'палиндром';
-    } 
+    }
     return 'не палиндром';
 }
-
-
-
 
 
 function runPalindrome() {
