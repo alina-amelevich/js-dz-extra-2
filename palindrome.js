@@ -1,29 +1,29 @@
-function replaseSymbol(text, symb, sub = '') {
+function replaceSymbol(text, symb, sub = '') {
     while (text.indexOf(symb) != -1) {
-        text = text.replase(symb, sub)
+        text = text.replace(symb, sub)
     }
     return text;
 }
 
 function isPalindrome(text) {
     text = text.toLowerCase();
-    text = replaseSymbol(text, ' ');
-    text = replaseSymbol(text, 'ё', 'е');
-    text = replaseSymbol(text, 'ь');
-    text = replaseSymbol(text, 'ъ');
-    text = replaseSymbol(text, '.');
-    text = replaseSymbol(text, ',');
-    text = replaseSymbol(text, '!');
-    text = replaseSymbol(text, '?');
-    text = replaseSymbol(text, '-');
-    text = replaseSymbol(text, ':');
-    text = replaseSymbol(text, ';');
-    text = replaseSymbol(text, '(');
-    text = replaseSymbol(text, ')');
-    text = replaseSymbol(text, '"');
-    text = replaseSymbol(text, '/');
-    text = replaseSymbol(text, '{');
-    text = replaseSymbol(text, '}');
+    text = replaceSymbol(text, ' ');
+    text = replaceSymbol(text, 'ё', 'е');
+    text = replaceSymbol(text, 'ь');
+    text = replaceSymbol(text, 'ъ');
+    text = replaceSymbol(text, '.');
+    text = replaceSymbol(text, ',');
+    text = replaceSymbol(text, '!');
+    text = replaceSymbol(text, '?');
+    text = replaceSymbol(text, '-');
+    text = replaceSymbol(text, ':');
+    text = replaceSymbol(text, ';');
+    text = replaceSymbol(text, '(');
+    text = replaceSymbol(text, ')');
+    text = replaceSymbol(text, '"');
+    text = replaceSymbol(text, '/');
+    text = replaceSymbol(text, '{');
+    text = replaceSymbol(text, '}');
 
     let reverseText = '';
 
@@ -40,5 +40,5 @@ function isPalindrome(text) {
 
 function runPalindrome() {
     let userText = prompt('Введите фразу');
-    console.log('Фраза ' + '' + ' - это ' + isPalindrome(userText))
+    console.log('Фраза ' + userText + ' - это ' + isPalindrome(userText))
 }
