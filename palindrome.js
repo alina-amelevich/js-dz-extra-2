@@ -8,6 +8,10 @@ function replaceSymbol(text, symb, sub = '') {
 function isPalindrome(text) {
     text = text.toLowerCase();
     text = replaceSymbol(text, ' ');
+    text = replaceSymbol(text, '\n');   // Без пробельных символов один раз выскочил какой-то баг, поэтому добавила их
+    text = replaceSymbol(text, '\t');   // - // -
+    text = replaceSymbol(text, '\r');   // - // -
+    text = replaceSymbol(text, '\v');   // - // -
     text = replaceSymbol(text, 'ё', 'е');
     text = replaceSymbol(text, 'ь');
     text = replaceSymbol(text, 'ъ');
@@ -36,7 +40,6 @@ function isPalindrome(text) {
     }
     return 'не палиндром';
 }
-
 
 function runPalindrome() {
     let userText = prompt('Введите фразу');
