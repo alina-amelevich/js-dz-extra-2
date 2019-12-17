@@ -35,15 +35,17 @@ function isPalindrome(text) {
     
     do {
         if (text.charAt(i) !== text.charAt(j)) {
-            return 'не палиндром';
+            return false;
         };
         i++;
         j--;
     } while ((i !== j) & (text.charAt(i) === text.charAt(j)));
-    return 'палиндром';
+    return true;
 }
 
 function runPalindrome() {
     let userText = prompt('Введите фразу');
-    console.log('Фраза ' + '"' + userText + '"' + ' - это ' + isPalindrome(userText))
+    let checkPalindrome = isPalindrome(userText);
+    let value = (checkPalindrome === true) ? 'палиндром' : 'не палиндром';
+    alert('Фраза ' + '"' + userText + '"' + ' - это ' + value);
 }
