@@ -39,7 +39,7 @@ function isPalindrome(text) {
         };
         i++;
         j--;
-    } while ((i < text.length) && (text.charAt(i) === text.charAt(j)));
+    } while ((i <= j) && (text.charAt(i) === text.charAt(j)));
     return true;
 }
 
