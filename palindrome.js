@@ -33,13 +33,13 @@ function isPalindrome(text) {
     let i = 0;
     let j = text.length - 1;
     
-    do {
+    while (i < j) {
         if (text.charAt(i) !== text.charAt(j)) {
             return false;
         };
         i++;
         j--;
-    } while ((i <= j) && (text.charAt(i) === text.charAt(j)));
+    } 
     return true;
 }
 
